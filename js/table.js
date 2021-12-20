@@ -39,6 +39,7 @@ function createTimeTable(time) {
       let cell;
       cell = document.createElement("div");
       cell.classList.add("cell");
+      cell.classList.add("time-cell");
       cell.setAttribute("id", `${time.id[r]}`);
       cell.innerHTML = time.format12[r];
       column.appendChild(cell);
@@ -63,6 +64,7 @@ function createDayTable(days) {
       let cell;
       cell = document.createElement("div");
       cell.classList.add("cell");
+      cell.classList.add("day-cell");
       cell.innerHTML = days.days[c];
       column.appendChild(cell);
     }
