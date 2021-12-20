@@ -9,7 +9,7 @@ Features to be added
 ---
 Touch support
 
-Color panel
+Color panel - instead of entering hex code - in the edit modal
 
 Scroll to current time of the day
 
