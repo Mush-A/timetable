@@ -250,7 +250,7 @@ class Task {
   }
 
   load() {
-    this.tasks = JSON.parse(localStorage.getItem("tasks"));
+    this.tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     this.addTaskToDom();
   }
 }
