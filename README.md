@@ -15,8 +15,8 @@ About
 ---
 I needed a simple time table to refer and quicky edit in order to get stuff done. I used google sheets thus far:
 
-![Imgur](https://imgur.com/A9WnV0t)
+![](https://i.imgur.com/A9WnV0t.jpg)
 
 This is an easy to edit interactive alternative:
 
-![Imgur](https://imgur.com/K7EOCM1)
+![](https://i.imgur.com/K7EOCM1.png)
