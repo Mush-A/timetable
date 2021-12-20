@@ -130,7 +130,10 @@ class Task {
 
       document.getElementById(id).remove();
 
-      parent.setAttribute("id", parent.id.replace(/f/, "e"));
+      // delay a little in order to not register another task-creating click
+      setTimeout(() => {
+        parent.setAttribute("id", parent.id.replace(/f/, "e"));
+      }, 1);
 
       button.removeEventListener("click", close);
 
