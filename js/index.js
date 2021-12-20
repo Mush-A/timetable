@@ -19,5 +19,3 @@ let time = hour + min;
 document.getElementById(time).style.backgroundColor = "#89B5AF";
 
 document.getElementById(day).children[0].style.backgroundColor = "#89B5AF";
-
-console.log(day);
