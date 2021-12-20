@@ -8,7 +8,9 @@ Simply install all the files and run index.html file.
 Features to be added
 ---
 Touch support
+
 Color panel
+
 Scroll to current time of the day
 
 About
