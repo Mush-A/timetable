@@ -49,6 +49,10 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
+#task-table {
+  position: relative;
+}
+
 /****************/
 
 .body-table {
@@ -111,6 +115,14 @@ body {
 .edit-button:hover {
   cursor: pointer;
   color: white;
+}
+
+.link {
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
+  font-family: monospace;
+  text-decoration: none;
 }
 
 /*****/

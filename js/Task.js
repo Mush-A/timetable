@@ -20,13 +20,14 @@ class Task {
       title: "Title...",
       backgroundColor: "#FF7878",
       details: "No details",
+      link: "#",
     };
 
     let selectBox, cellVerticalCoord, start, end;
 
     function mouseMove(e) {
       selectBox.style.height =
-        e.clientY - cellVerticalCoord + window.scrollY - 4 + "px";
+        e.clientY - cellVerticalCoord + window.scrollY - 25 + "px";
     }
 
     for (let i = 0; i < cells.length; i++) {
@@ -80,6 +81,7 @@ class Task {
             title: "Title...",
             backgroundColor: "#FF7878",
             details: "No details",
+            link: "#",
           };
 
           this.addTaskToDom();
@@ -106,6 +108,8 @@ class Task {
         this.addCloseButton(parent, taskBlock, task.id);
 
         this.addEditButton(parent, taskBlock, task.id);
+
+        this.addLink(taskBlock, task.link);
 
         let title = document.createElement("div");
         title.innerHTML = `<h4>${task.title}<h4>`;
@@ -153,6 +157,7 @@ class Task {
     let editModal = document.getElementById("edit-modal");
     let editInput = document.getElementById("edit-input");
     let editColor = document.getElementById("edit-color");
+    let editLink = document.getElementById("edit-link");
     let editSave = document.getElementById("edit-save");
 
     let self = this;
@@ -164,6 +169,7 @@ class Task {
 
       editInput.value = task.title;
       editColor.value = task.backgroundColor;
+      editLink.value = task.link;
 
       editSave.onclick = () => {
         self.tasks.find((task) => task.id === id).title =
@@ -174,6 +180,8 @@ class Task {
         )
           ? editColor.value
           : "#FF7878";
+
+        self.tasks.find((task) => task.id === id).link = editLink.value || "#";
 
         editModal.style.display = "none";
 
@@ -192,6 +200,16 @@ class Task {
     button.addEventListener("click", edit);
 
     taskBlock.appendChild(button);
+  }
+
+  addLink(taskBlock, tasklink) {
+    let link = document.createElement("a");
+    link.classList.add("link");
+    link.setAttribute("target", "_blank");
+    link.innerHTML = "➔";
+    link.href = tasklink || "#";
+
+    taskBlock.appendChild(link);
   }
 
   save() {
